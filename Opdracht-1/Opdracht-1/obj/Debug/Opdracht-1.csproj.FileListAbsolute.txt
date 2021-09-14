@@ -1,0 +1,10 @@
+C:\Users\mailt\source\repos\Programmeren-periode-5\Opdracht-1\Opdracht-1\bin\Debug\Opdracht-1.exe.config
+C:\Users\mailt\source\repos\Programmeren-periode-5\Opdracht-1\Opdracht-1\bin\Debug\Opdracht-1.exe
+C:\Users\mailt\source\repos\Programmeren-periode-5\Opdracht-1\Opdracht-1\bin\Debug\Opdracht-1.pdb
+C:\Users\mailt\source\repos\Programmeren-periode-5\Opdracht-1\Opdracht-1\obj\Debug\Opdracht-1.csprojAssemblyReference.cache
+C:\Users\mailt\source\repos\Programmeren-periode-5\Opdracht-1\Opdracht-1\obj\Debug\Opdracht_1.frmOpdracht1.resources
+C:\Users\mailt\source\repos\Programmeren-periode-5\Opdracht-1\Opdracht-1\obj\Debug\Opdracht_1.Properties.Resources.resources
+C:\Users\mailt\source\repos\Programmeren-periode-5\Opdracht-1\Opdracht-1\obj\Debug\Opdracht-1.csproj.GenerateResource.cache
+C:\Users\mailt\source\repos\Programmeren-periode-5\Opdracht-1\Opdracht-1\obj\Debug\Opdracht-1.csproj.CoreCompileInputs.cache
+C:\Users\mailt\source\repos\Programmeren-periode-5\Opdracht-1\Opdracht-1\obj\Debug\Opdracht-1.exe
+C:\Users\mailt\source\repos\Programmeren-periode-5\Opdracht-1\Opdracht-1\obj\Debug\Opdracht-1.pdb
