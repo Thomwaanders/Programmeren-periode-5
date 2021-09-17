@@ -14,6 +14,7 @@ namespace Opdracht_1
     {
         Balk objBalk;
         Klant objklant;
+        Cilinder objCilinder;
 
         public frmOpdracht1()
         {
@@ -24,6 +25,9 @@ namespace Opdracht_1
         {
             
         }
+        
+        
+
 
         public void btnBestel_Click(object sender, EventArgs e)
         {
@@ -38,7 +42,11 @@ namespace Opdracht_1
 
             try
             {
-                objBalk = new Balk(doubleLengte, doubleBreedte, doubleHoogte);
+                if (radioButton1.Checked)
+                {
+                    objCilinder = new Cilinder(doubleBreedte, doubleHoogte);
+                } else
+                    objBalk = new Balk(doubleLengte, doubleBreedte, doubleHoogte);
             }
             catch (Exception ex)
             {
@@ -54,25 +62,31 @@ namespace Opdracht_1
                 btnBestel.Enabled = true;
                 bon();
             }
-                
-
-
-            
-          
+             
         }
+
+
 
         void bon()
         {
             string kubusBalk;
+            string uitkomst;
             
-            if (objBalk.Iskubus == true)
+            if (radioButton1.Checked)
             {
-                kubusBalk = "Kubus";
+                kubusBalk = "cilinder";
+                uitkomst = "Inhoud bloembak: " + objCilinder.cilinderVolume + "m3";
+            } else if (objBalk.Iskubus == true)
+            {
+                kubusBalk = "kubus";
+                uitkomst = "Inhoud bloembak: " + objBalk.Volume + "m3";
             }
             else
-                kubusBalk = "Balk";
+            {
+                kubusBalk = "balk";
+                uitkomst = "Inhoud bloembak: " + objBalk.Volume + "m3";
+            }
 
-            txtBon.Text = "";
 
             txtBon.Text = "Klant: " + Environment.NewLine
                 + txtVoornaam.Text + " " + txtTussenvoegsel.Text + " " + txtAchternaam.Text + Environment.NewLine
@@ -82,7 +96,17 @@ namespace Opdracht_1
                 + "Lengte: " + txtLengte.Text + " cm" + Environment.NewLine
                 + "Breedte: " + txtBreedte.Text + " cm" + Environment.NewLine
                 + "Hoogte: " + txtHoogte.Text + " cm" + Environment.NewLine + Environment.NewLine
-                + "Inhoud bloembak: " + objBalk.Volume + " m3";
+                + uitkomst;
+               
+
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton1.Checked)
+            {
+                txtLengte.Enabled = false;
+            }
         }
     }
 }

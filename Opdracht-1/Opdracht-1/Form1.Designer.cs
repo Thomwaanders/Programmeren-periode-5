@@ -54,12 +54,14 @@ namespace Opdracht_1
             this.label1 = new System.Windows.Forms.Label();
             this.grbBon = new System.Windows.Forms.GroupBox();
             this.txtBon = new System.Windows.Forms.TextBox();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.grbBestellenBloembak.SuspendLayout();
             this.grbBon.SuspendLayout();
             this.SuspendLayout();
             // 
             // grbBestellenBloembak
             // 
+            this.grbBestellenBloembak.Controls.Add(this.radioButton1);
             this.grbBestellenBloembak.Controls.Add(this.btnBestel);
             this.grbBestellenBloembak.Controls.Add(this.txtTussenvoegsel);
             this.grbBestellenBloembak.Controls.Add(this.label13);
@@ -288,6 +290,18 @@ namespace Opdracht_1
             this.txtBon.Size = new System.Drawing.Size(320, 253);
             this.txtBon.TabIndex = 0;
             // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(24, 189);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(149, 21);
+            this.radioButton1.TabIndex = 2;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Wilt u een cilinder?";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
             // frmOpdracht1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -334,6 +348,7 @@ namespace Opdracht_1
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox grbBon;
         private System.Windows.Forms.TextBox txtBon;
+        private System.Windows.Forms.RadioButton radioButton1;
     }
 }
 

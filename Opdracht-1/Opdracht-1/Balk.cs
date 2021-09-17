@@ -25,11 +25,12 @@ namespace Opdracht_1
             }
         }
 
+
         public double Volume
         {
             get
             {
-                return (Lengte * Breedte * Hoogte) / 1000;
+                return (Lengte * Breedte * Hoogte) / 100000;
             }
                 
         }
@@ -48,6 +49,7 @@ namespace Opdracht_1
                 throw new ArgumentException("Maatvoering moet groter zijn als 0");
             
         }
+
 
     }
 }
