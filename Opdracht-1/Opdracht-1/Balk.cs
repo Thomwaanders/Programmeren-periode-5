@@ -39,14 +39,14 @@ namespace Opdracht_1
 
         public Balk(double lengte, double breedte, double hoogte)
         {
-            if (lengte > 0 && breedte > 0 && hoogte > 0)
+            if (lengte > 0 && lengte < 100 && breedte > 0 && breedte < 100 && hoogte > 0 && hoogte < 100)
             {
                 Lengte = lengte;
                 Breedte = breedte;
                 Hoogte = hoogte;
             }
             else
-                throw new ArgumentException("Maatvoering moet groter zijn als 0");
+                throw new ArgumentException("Maatvoering moet groter zijn als 0 en kleiner als 100");
             
         }
 

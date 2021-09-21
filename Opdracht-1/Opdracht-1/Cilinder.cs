@@ -14,13 +14,13 @@ namespace Opdracht_1
 
         public Cilinder(double breedte, double hoogte)
         {
-            if (breedte > 0 && hoogte > 0)
+            if (breedte > 0 && breedte < 100 && hoogte > 0 && hoogte < 100)
             {
                 Breedte = breedte;
                 Hoogte = hoogte;
             }
             else
-                throw new ArgumentException("Maatvoering moet groter zijn als 0");
+                throw new ArgumentException("Maatvoering moet groter zijn als 0 en kleiner als 100");
 
         }
 

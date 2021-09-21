@@ -16,14 +16,17 @@ namespace Opdracht_1
         Klant objklant;
         Cilinder objCilinder;
 
+
         public frmOpdracht1()
         {
             InitializeComponent();
         }
 
+
+
         private void frmOpdracht1_Load(object sender, EventArgs e)
         {
-            
+           
         }
         
         
@@ -51,11 +54,13 @@ namespace Opdracht_1
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+                this.Close();
             }
             
             if(txtVoornaam.Text == "" || txtAchternaam.Text == "" || txtAdres.Text == "" || txtPostcode.Text == "")
             {
                 MessageBox.Show("Vul alle velden in!");
+                this.Close();
             }
             else
             {
@@ -67,24 +72,78 @@ namespace Opdracht_1
 
 
 
+        
         void bon()
         {
+
             string kubusBalk;
             string uitkomst;
-            
+            string kosten;
+
+            if(radioButton1.Checked) 
+            {
+                if (objCilinder.cilinderVolume <= 0.2)
+                {
+                    kosten = "$40";
+                }
+                else if (objCilinder.cilinderVolume >= 0.2 && objCilinder.cilinderVolume <= 0.4)
+                {
+                    kosten = "$80";
+                }
+                else if (objCilinder.cilinderVolume >= 0.4 && objCilinder.cilinderVolume <= 0.6)
+                {
+                    kosten = "$140";
+                }
+                else if (objCilinder.cilinderVolume >= 0.6 && objCilinder.cilinderVolume <= 0.8)
+                {
+                    kosten = "$210";
+                }
+                else
+                {
+                    kosten = "$250";
+                }
+            }
+            else
+            {
+                if (objBalk.Volume <= 0.2)
+                {
+                    kosten = "$40";
+                }
+                else if (objBalk.Volume >= 0.2 && objBalk.Volume <= 0.4)
+                {
+                    kosten = "$80";
+                }
+                else if (objBalk.Volume >= 0.4 && objBalk.Volume <= 0.6)
+                {
+                    kosten = "$140";
+                }
+                else if (objBalk.Volume >= 0.6 && objBalk.Volume <= 0.8)
+                {
+                    kosten = "$210";
+                }
+                else
+                {
+                    kosten = "$250";
+                }
+
+            }
+
             if (radioButton1.Checked)
             {
                 kubusBalk = "cilinder";
                 uitkomst = "Inhoud bloembak: " + objCilinder.cilinderVolume + "m3";
+                pictureBox1.Image = Properties.Resources.cilinder_vormige_pot;
             } else if (objBalk.Iskubus == true)
             {
                 kubusBalk = "kubus";
                 uitkomst = "Inhoud bloembak: " + objBalk.Volume + "m3";
+                pictureBox1.Image = Properties.Resources.kubus;
             }
             else
             {
                 kubusBalk = "balk";
                 uitkomst = "Inhoud bloembak: " + objBalk.Volume + "m3";
+                pictureBox1.Image = Properties.Resources.rechthoekige_pot;
             }
 
 
@@ -96,7 +155,8 @@ namespace Opdracht_1
                 + "Lengte: " + txtLengte.Text + " cm" + Environment.NewLine
                 + "Breedte: " + txtBreedte.Text + " cm" + Environment.NewLine
                 + "Hoogte: " + txtHoogte.Text + " cm" + Environment.NewLine + Environment.NewLine
-                + uitkomst;
+                + uitkomst + Environment.NewLine
+                + "Pirjs van de pot: " + kosten;
                
 
         }
@@ -107,6 +167,11 @@ namespace Opdracht_1
             {
                 txtLengte.Enabled = false;
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }

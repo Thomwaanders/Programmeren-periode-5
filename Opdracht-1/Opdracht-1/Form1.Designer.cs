@@ -30,6 +30,7 @@ namespace Opdracht_1
         private void InitializeComponent()
         {
             this.grbBestellenBloembak = new System.Windows.Forms.GroupBox();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.btnBestel = new System.Windows.Forms.Button();
             this.txtTussenvoegsel = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -54,9 +55,10 @@ namespace Opdracht_1
             this.label1 = new System.Windows.Forms.Label();
             this.grbBon = new System.Windows.Forms.GroupBox();
             this.txtBon = new System.Windows.Forms.TextBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.grbBestellenBloembak.SuspendLayout();
             this.grbBon.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // grbBestellenBloembak
@@ -90,6 +92,18 @@ namespace Opdracht_1
             this.grbBestellenBloembak.TabIndex = 0;
             this.grbBestellenBloembak.TabStop = false;
             this.grbBestellenBloembak.Text = "Bestelling Bloembak";
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(24, 189);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(149, 21);
+            this.radioButton1.TabIndex = 2;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Wilt u een cilinder?";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // btnBestel
             // 
@@ -290,23 +304,21 @@ namespace Opdracht_1
             this.txtBon.Size = new System.Drawing.Size(320, 253);
             this.txtBon.TabIndex = 0;
             // 
-            // radioButton1
+            // pictureBox1
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(24, 189);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(149, 21);
-            this.radioButton1.TabIndex = 2;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Wilt u een cilinder?";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.pictureBox1.Location = new System.Drawing.Point(1220, 103);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(185, 206);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // frmOpdracht1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1238, 450);
+            this.ClientSize = new System.Drawing.Size(1436, 417);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.grbBon);
             this.Controls.Add(this.grbBestellenBloembak);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -317,6 +329,7 @@ namespace Opdracht_1
             this.grbBestellenBloembak.PerformLayout();
             this.grbBon.ResumeLayout(false);
             this.grbBon.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -349,6 +362,7 @@ namespace Opdracht_1
         private System.Windows.Forms.GroupBox grbBon;
         private System.Windows.Forms.TextBox txtBon;
         private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
